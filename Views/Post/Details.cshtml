@@ -1,0 +1,13 @@
+@model ImplementaPost.DTO.PostDTO
+
+<h2>Detalles del Post</h2>
+
+<div>
+    <h4>ID: @Model.id</h4>
+    <h4>Título: @Model.title</h4>
+    <p>Cuerpo: @Model.body</p>
+</div>
+
+<p>
+    <a asp-action="Index">Volver a la lista</a>
+</p>

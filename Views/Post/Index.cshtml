@@ -1,0 +1,31 @@
+@model List<ImplementaPost.DTO.PostDTO>
+
+<h2>Lista de Posts</h2>
+
+<p>
+    <a asp-action="Create">Crear Nuevo Post</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td>@post.id</td>
+                <td>@post.title</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@post.id">Detalles</a> |
+                    <a asp-action="Edit" asp-route-id="@post.id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@post.id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

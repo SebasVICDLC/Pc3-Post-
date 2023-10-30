@@ -1,0 +1,14 @@
+@model ImplementaPost.DTO.PostDTO
+
+<h2>Confirmar Eliminación</h2>
+
+<div>
+    <h4>ID: @Model.id</h4>
+    <h4>Título: @Model.title</h4>
+    <p>Cuerpo: @Model.body</p>
+</div>
+
+<form asp-action="Delete" asp-route-id="@Model.id">
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index">Cancelar</a>
+</form>
